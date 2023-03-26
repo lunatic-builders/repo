@@ -7,9 +7,9 @@ n-card
 
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import {NCard, NSpace, NButton} from 'naive-ui'
-import {useAppStore} from "../stores/app.ts";
+import {useAppStore} from "../stores/app";
 const store = useAppStore()
 </script>
 

@@ -10,10 +10,10 @@
   Login
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import Login from "../components/Login.vue";
 import {NButton, NCard} from "naive-ui";
-import {useAppStore} from "../stores/app.ts";
+import {useAppStore} from "../stores/app";
 import ThemeSwitcher from "../components/ThemeSwitcher.vue";
 import LangSwitcher from "../components/LangSwitcher.vue";
 const store = useAppStore();

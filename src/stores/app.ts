@@ -29,7 +29,8 @@ export const useAppStore = defineStore('app', {
             const { data, error } = await supabase.auth.signInWithOAuth({
                 provider: 'google',
                 options: {
-                    redirectTo: `${window.location.protocol}//${window.location.host}/login?verify`
+                    redirectTo: `${window.location.protocol}//${window.location.host}/login?verify`,
+                    // skipBrowserRedirect: true
                 }
             })
             console.log(`${window.location.protocol}//${window.location.host}/login`)

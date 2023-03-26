@@ -7,7 +7,7 @@
     Login
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import Login from "../components/Login.vue";
 import EnterAnimation from "../components/EnterAnimation.vue";
 </script>
