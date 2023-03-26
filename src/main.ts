@@ -11,11 +11,12 @@ import {useAppStore} from "./stores/app";
     app.use(createPinia())
     app.use(TroisJSVuePlugin);
     app.use(router)
-    app.use(i18n)
+    const store = useAppStore();
+
+    app.use(i18n(useAppStore().locale || 'en'))
     app.mount('#app');
 
 
-// const store = useAppStore();
 // store.$subscribe((_locale, state) => {
 //     console.info(state.locale);
 //     i18n.global.locale = state.locale;

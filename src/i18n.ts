@@ -2,13 +2,13 @@ import { createI18n } from 'vue-i18n'
 import {useAppStore} from "./stores/app";
 
 const messages = {
-    en: () => import('./locales/en.json'),
-    cz: () => import('./locales/cz.json'),
+    en: await import('./locales/en.json'),
+    cz: await import('./locales/cz.json'),
 }
 
-const i18n = createI18n({
+const i18n = (locale:string) => createI18n({
     legacy: false,
-    locale: () => useAppStore().locale,
+    locale,
     fallbackLocale: 'en',
     messages
 })
