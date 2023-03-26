@@ -15,7 +15,7 @@ const i18n = installI18n(app);
 app.mount('#app');
 
 const store = useAppStore();
-store.$subscribe((_locale, state) => {
-    console.info(state.locale);
-    i18n.global.locale = state.locale;
-});
+// store.$subscribe((_locale, state) => {
+//     console.info(state.locale);
+//     i18n.global.locale = state.locale;
+// });

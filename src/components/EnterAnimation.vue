@@ -24,6 +24,7 @@ Renderer(ref="renderer" alpha antialias resize)
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useWindowSize } from '@vueuse/core'
+import {Vector3} from 'three'
 
 const renderer = ref<any>(null)
 
@@ -43,7 +44,6 @@ function getRandomPoint(r: number): Point {
   return { x, y };
 }
 console.log(getRandomPoint(maxLength.value/2))
-import {Vector3} from 'three'
 const lightPos = ref(new Vector3(0,0,50))
 interface Tube {
   key: string
